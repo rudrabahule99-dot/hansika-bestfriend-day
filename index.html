@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Best Friend Day Hansika ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+overflow-x:hidden;
+text-align:center;
+color:#fff;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+h1{
+font-size:3rem;
+animation:glow 2s infinite;
+}
+
+@keyframes glow{
+50%{transform:scale(1.05);}
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+100%{
+transform:translateY(-100px);
+opacity:1;
+}
+}
+
+.message{
+background:rgba(255,255,255,0.15);
+margin:20px;
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+.btn{
+padding:15px 30px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4d6d;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.hidden{
+display:none;
+}
+
+.gallery img{
+width:250px;
+border-radius:20px;
+margin:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.game{
+background:rgba(255,255,255,.15);
+padding:20px;
+margin:20px;
+border-radius:20px;
+}
+
+footer{
+padding:30px;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Happy Best Friend Day ❤️</h1>
+<h2>Hansika & Rudraksh</h2>
+
+<button class="btn" onclick="showSurprise()">
+Open Your Surprise 🎁
+</button>
+</div>
+
+<div id="surprise" class="hidden">
+
+<div class="message">
+<h2>Dear Hansika ❤️</h2>
+
+<p>
+Thank you for coming into my life and making every day brighter.
+Your friendship means more than words can express.
+Every laugh, every memory and every conversation with you
+has become a beautiful part of my life.
+
+Thank you for always being there.
+You are one of the most special people in my life.
+
+Happy Best Friend Day ❤️
+
+<br><br>
+Forever Grateful,<br>
+<b>Rudraksh</b>
+</p>
+</div>
+
+<div class="gallery">
+<h2>Friendship Memories 📸</h2>
+
+<img src="friend1.jpg">
+<img src="friend2.jpg">
+<img src="friend3.jpg">
+
+<p>Replace these images with your own photos.</p>
+</div>
+
+<div class="game">
+<h2>Friendship Quiz 🎮</h2>
+
+<p>Who is the best friend in the world?</p>
+
+<button class="btn" onclick="win()">Hansika ❤️</button>
+<button class="btn">Someone Else</button>
+</div>
+
+<div class="game">
+<h2>Find The Hidden Heart ❤️</h2>
+
+<button class="btn" onclick="alert('You found the secret heart! ❤️')">
+💖 Click Me
+</button>
+</div>
+
+<div class="game">
+<h2>Countdown of Friendship ⏳</h2>
+<p id="timer"></p>
+</div>
+
+</div>
+
+<footer>
+Made with ❤️ by Rudraksh for Hansika
+</footer>
+
+<script>
+
+function showSurprise(){
+document.getElementById("surprise").style.display="block";
+}
+
+function win(){
+alert("Correct! Hansika is the Best Friend Ever ❤️");
+confetti();
+}
+
+function confetti(){
+for(let i=0;i<80;i++){
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+document.body.appendChild(heart);
+}
+}
+
+setInterval(()=>{
+let start=new Date("2024-01-01");
+let now=new Date();
+let diff=Math.floor((now-start)/(1000*60*60*24));
+document.getElementById("timer").innerHTML=
+diff+" Days of Amazing Friendship ❤️";
+},1000);
+
+for(let i=0;i<20;i++){
+let heart=document.createElement("div");
+heart.innerHTML="💖";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
